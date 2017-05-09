@@ -22,101 +22,31 @@
 
 <body>
 
-  <div >
-      <form>
-          <fieldset >
-              <legend> SIGN OUT </legend>
-              <p>
-                  <button type="button" onclick="signOut()">SIGN Out </button>
-              </p>
-          </fieldset>
-      </form>
-  </div>
 
-    <div>
+    <div >
         <form>
-            <fieldset class="sign_info_undata">
-                <legend> SIGN INFO UPDATE </legend>
+            <fieldset class="sign_up_in">
+              <img src="img/welcome.jpg" class="welcome">
+                <legend> SIGN UP / IN </legend>
 
                 <p>
-                    <label for="username" class="user_name">User Name :&nbsp&nbsp</label>
-                    <input type="text" name="username" id="username" required>
-                </p>
-
-                <p>
-                    <label for="job" class="job">Job :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input type="text" name="job" id="job" required>
-                </p>
-
-                <p>
-                    <label for="age" class="age">Age :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input type="number" name="age" id="age" required>
-                </p>
-
-
-                <p>
-                    <label for="photo" class="photo">Photo :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input type="file" name="photo" id="photo" required>
-                    <input type="url" name="photoUrl" id="photoUrl" readonly/>
-                </p>
-
-                <p>
-                    <label for="descriptions" class="descriptions">Descriptions :</label>
-                    <textarea type="text" name="descriptions" id="descriptions" rows="1" cols="70"></textarea>
-                    <button type="button" onclick="updataInfo(this.form)">UPDATE</button>
-                </p>
-
-            </fieldset>
-        </form>
-    </div>
-
-
-    <div>
-        <form>
-            <fieldset class="user_info">
-                <legend > USER INFO</legend>
-                <p>
-                    <img src "" id="photo_e" />
+                    <label for="email">Email :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="email" name="email" id="email" required>
                 </p>
                 <p>
-                    <b>Email :</b>
-                    <span id="email_e"></span>
+                    <label for="password">Password :&nbsp&nbsp</label>
+                    <input type="password" name="password" id="password" required>
                 </p>
                 <p>
-                    <b>Username :</b>
-                    <span id="username_e"></span>
-                </p>
-                <p>
-                    <b>Job :</b>
-                    <span id="job_e"></span>
-                </p>
-                <p>
-                    <b>Age :</b>
-                    <span id="age_e"></span>
-                </p>
-                <p>
-                    <b>Descriptions :</b>
-                    <span id="descriptions_e"></span>
+                    <button type="button" onclick="signUp(this.form.email.value, this.form.password.value)" class="sign_up">SIGN UP </button>
+                    <button type="button" onclick="signIn(this.form.email.value, this.form.password.value)" class="sign_in">SIGN IN </button>
+                    <button type="button" onclick="signOut(this.form.email.value, this.form.password.value)"class="sign_out">SIGN Out </button>
                 </p>
             </fieldset>
         </form>
-    </div>
-
-
-    <div>
-        <fieldset class="chat_room">
-            <legend >CHAT ROOM </legend>
-            <div id="messageList"></div>
-            <form onsubmit="sendMessage(this);return false">
-                <input type="text" name="message" />
-                <button type="submit">SEND</button>
-            </form>
-        </fieldset>
     </div>
 
     <script src="./js/sign_up_in.js">
-    </script>
-    <script src="./js/firebase.js">
     </script>
 </body>
 

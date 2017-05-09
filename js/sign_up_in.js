@@ -18,7 +18,7 @@ function signIn(email, password) {
         .signInWithEmailAndPassword(email, password)
         .then(function(user) {
             alert('登入成功');
-            location.replace('./index.html')
+            location.replace('./sign.html')
             return user;
         })
         .catch(function(error) {
@@ -32,7 +32,7 @@ function signOut() {
         .signOut()
         .then(function(error) {
             alert('登出成功')
-            location.replace('./login.html')
+            location.replace('./index.html')
         });
 }
 //-----------------------------------------------------------------------
