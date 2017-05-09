@@ -1,0 +1,48 @@
+#messageList{
+    overflow-y: scroll;    /*卷軸*/
+    height: 100px;
+}
+body{
+  background-color: #dddddd;
+  overflow: auto;
+  width: 70%;
+  margin: auto;
+  height: auto;
+}
+.sign_up_in{
+  width: 30%;
+  margin: auto;
+  height: auto;
+}
+.sign_up{
+  margin-right: 13px;
+}
+.sign_in{
+  margin-right: 13px;
+}
+/*-----------------------------*/
+.sign_out{
+  width: 100px;
+  margin: auto;
+  height: auto;
+}
+.sign_info_undata{
+  width: 100%;
+  margin: auto;
+  height: auto;
+}
+.update{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/*-----------------------------*/
+.user_info{
+  width: 100%;
+  margin: auto;
+  height: auto;
+}
+.chat_room{
+  width: 100%;
+  margin: auto;
+  height: auto;
+}

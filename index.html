@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBARqv5Ob_PS7KRlKYOYze75Lmnl8S7nPU",
+            authDomain: "fir-69fb1.firebaseapp.com",
+            databaseURL: "https://fir-69fb1.firebaseio.com",
+            projectId: "fir-69fb1",
+            storageBucket: "fir-69fb1.appspot.com",
+            messagingSenderId: "1089592058077"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div >
+      <form>
+          <fieldset >
+              <legend> SIGN OUT </legend>
+              <p>
+                  <button type="button" onclick="signOut()">SIGN Out </button>
+              </p>
+          </fieldset>
+      </form>
+  </div>
+
+    <div>
+        <form>
+            <fieldset class="sign_info_undata">
+                <legend> SIGN INFO UPDATE </legend>
+
+                <p>
+                    <label for="username" class="user_name">User Name :&nbsp&nbsp</label>
+                    <input type="text" name="username" id="username" required>
+                </p>
+
+                <p>
+                    <label for="job" class="job">Job :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="text" name="job" id="job" required>
+                </p>
+
+                <p>
+                    <label for="age" class="age">Age :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="number" name="age" id="age" required>
+                </p>
+
+
+                <p>
+                    <label for="photo" class="photo">Photo :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="file" name="photo" id="photo" required>
+                    <input type="url" name="photoUrl" id="photoUrl" readonly/>
+                </p>
+
+                <p>
+                    <label for="descriptions" class="descriptions">Descriptions :</label>
+                    <textarea type="text" name="descriptions" id="descriptions" rows="1" cols="70"></textarea>
+                    <button type="button" onclick="updataInfo(this.form)">UPDATE</button>
+                </p>
+
+            </fieldset>
+        </form>
+    </div>
+
+
+    <div>
+        <form>
+            <fieldset class="user_info">
+                <legend > USER INFO</legend>
+                <p>
+                    <img src "" id="photo_e" />
+                </p>
+                <p>
+                    <b>Email :</b>
+                    <span id="email_e"></span>
+                </p>
+                <p>
+                    <b>Username :</b>
+                    <span id="username_e"></span>
+                </p>
+                <p>
+                    <b>Job :</b>
+                    <span id="job_e"></span>
+                </p>
+                <p>
+                    <b>Age :</b>
+                    <span id="age_e"></span>
+                </p>
+                <p>
+                    <b>Descriptions :</b>
+                    <span id="descriptions_e"></span>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <div>
+        <fieldset class="chat_room">
+            <legend >CHAT ROOM </legend>
+            <div id="messageList"></div>
+            <form onsubmit="sendMessage(this);return false">
+                <input type="text" name="message" />
+                <button type="submit">SEND</button>
+            </form>
+        </fieldset>
+    </div>
+
+    <script src="./js/sign_up_in.js">
+    </script>
+    <script src="./js/firebase.js">
+    </script>
+</body>
+
+</html>
